@@ -1,0 +1,2 @@
+# DjangoCrud
+Django crud assignment
