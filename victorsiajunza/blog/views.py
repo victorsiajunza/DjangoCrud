@@ -3,6 +3,7 @@ from django.views.generic.edit import CreateView
 from django.views.generic import ListView
 from django.views.generic import UpdateView
 from django.views.generic import DeleteView
+from django.views.generic import DetailView
 from .models import Post
 
 # Create your views here.
@@ -15,6 +16,9 @@ class PostCreateView(CreateView):
 fields = '__all__'
 
 success_url  = reverse_lazy('blog:all')
+
+class PostDetailView(DetailView):
+    model = Post
 
 class PostUpdateView(UpdateView):
     model = Post
